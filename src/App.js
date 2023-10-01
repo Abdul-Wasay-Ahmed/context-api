@@ -1,25 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import Main from "./components/main"
+import Members from "./components/members"
+import Products from "./components/products"
+import { FetchProvider } from "./context/userContext"
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+const App = () =>{
+return(
+  <div>
+    <h1>App.js</h1>
+   <FetchProvider>
+<Main/>
+<Members/>
+<Products/>
+</FetchProvider>
+
+  </div>
+)
 }
-
-export default App;
+export default App
